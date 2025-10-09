@@ -4,7 +4,7 @@ Ce module implémente un jeu de bataille navale simple en Python.
 """
 
 import random
-from typing import List, Tuple
+from typing import Tuple
 
 # Constantes globales
 TAILLE_MIN = 3  # Taille minimale autorisée pour la grille
@@ -62,12 +62,7 @@ def demander_taille_grille():
         except ValueError:
             print("Erreur: Veuillez entrer un nombre entier valide.")
 
-def demander_coordonnees():
-    """
-    Demande à l'utilisateur de choisir une case.
-    :return: Coordonnées choisies (x, y).
-
-def choix_utilisateur(taille: int = TAILLE) -> Tuple[int, int]:
+def demander_coordonnees(taille: int = TAILLE_MAX) -> Tuple[int, int]:
     """Lit et retourne une saisie utilisateur au format "ligne,col".
     
     Valide que les coordonnées sont au bon format et dans les limites de la grille.
